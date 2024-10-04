@@ -12,10 +12,10 @@ public class UserService {
 
     private final Repository userRepository;
 
-    @Autowired
-    private UserService(Repository userRepository) {
-        this.userRepository = userRepository;
-    }
+     @Autowired
+     public UserService(Repository userRepository) {
+         this.userRepository = userRepository;
+     }
     public User findById(Long id) {
         return userRepository.findById(id).orElse(null);
     }
